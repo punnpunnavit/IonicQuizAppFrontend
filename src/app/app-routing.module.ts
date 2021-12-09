@@ -11,6 +11,20 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'scoreboard',
+    loadChildren: () => import('./scoreboard/scoreboard.module').then( m => m.ScoreboardPageModule)
+  },
+  {
+    path: 'second',
+    loadChildren: () => import('./second/second.module').then( m => m.SecondPageModule)
+  },
+  {
+    path: 'third',
+    loadChildren: () => import('./third/third.module').then( m => m.ThirdPageModule)
+  },
+ 
+  
 ];
 
 @NgModule({

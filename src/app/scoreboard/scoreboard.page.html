@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Scoreboard</ion-title>
+  </ion-toolbar>
+</ion-header>,
+
+<div *ngIf='scoreboard$ | async as ans'>
+  <ion-card *ngFor='let item of ans.data'>
+    <ion-card-content>
+
+      Name: {{item.name}}
+      <br>
+      Score:{{item.score}}
+    </ion-card-content>
+
+  </ion-card>
+</div>
